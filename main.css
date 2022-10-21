@@ -1,0 +1,574 @@
+@import "./fontawesome/css/all.css";
+
+:root {
+  --lighterer-main-color: #b0abd3;
+  --lighter-main-color: #6258a7;
+  --main-color: #3b2f92;
+  --darker-main-color: #1d1749;
+  --darkerer-main-color: #17123a;
+
+  --main-text-color: #ffffff;
+
+  --light-color: #ffffff;
+  --dimer-color: #a9a9a9;
+  --dark-color: #000000;
+}
+
+body {
+  margin: 0;
+  background-color: var(--darker-main-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 0.2em solid var(--light-color);
+  transition: 2s;
+  background-color: var(--main-color);
+  z-index: 1000;
+}
+
+header aside img {
+  width: 5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-size: 1.2em;
+  color: var(--main-text-color);
+  transition: 2s;
+}
+
+header #center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header #socials {
+  color: var(--main-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 10em;
+  transition: 1.5s;
+}
+
+header #socials a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: 1.5s;
+}
+
+button {
+  border: 2px solid var(--light-color);
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+  transition: 1.5s;
+}
+
+button :hover {
+  background-color: var(--main-color);
+}
+
+header:hover {
+  background-color: var(--light-color);
+  border-bottom: 0.2em solid var(--main-color);
+}
+
+header:hover img {
+  content: url(Medias/Logo/logo-supinfo.png);
+}
+
+header:hover p {
+  color: var(--main-color);
+}
+
+header:hover #socials {
+  color: var(--main-color);
+}
+
+header:hover #socials a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+header:hover #socials a:hover {
+  transform: scale(1.5);
+  color: var(--darker-main-color);
+}
+
+header:hover button {
+  border: 2px solid var(--dark-color);
+}
+
+header:hover button:hover {
+  border: 2px solid var(--dark-color);
+  transform: scale(1.1);
+  background-color: var(--lighter-main-color);
+}
+
+input.toggle {
+  opacity: 0;
+  position: absolute;
+}
+
+nav i {
+  transform: scale(3);
+  color: var(--light-color);
+}
+
+header:hover nav i {
+  transform: scale(3);
+  color: var(--main-color);
+}
+
+div#navbar {
+  position: absolute;
+  left: 0;
+  top: 6em;
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: 0.5s dropdown;
+  transition: 2s;
+}
+
+div#navbar a {
+  text-decoration: none;
+  color: var(--light-color);
+  opacity: 0;
+  transition: 2s;
+}
+
+input.toggle:checked + label div#navbar {
+  height: 4em;
+  background-color: var(--main-color);
+  border-bottom: 0.3em solid var(--light-color);
+  border-top: 0.3em solid var(--darker-main-color);
+  transition: 2s;
+}
+
+input.toggle:checked + label div#navbar a {
+  font-size: 1.3em;
+  text-align: center;
+  animation: 1.2s apear forwards;
+}
+
+header:hover input.toggle:checked + label div#navbar {
+  background-color: var(--light-color);
+  border-bottom: 0.2em solid var(--main-color);
+}
+
+header:hover input.toggle:checked + label div#navbar a {
+  color: var(--main-color);
+}
+
+#main-decoration {
+  z-index: -1;
+  text-align: center;
+}
+
+#main-decoration img {
+  width: 100%;
+  height: 100vh;
+}
+
+#main-decoration p {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  color: var(--main-text-colorr);
+  font-size: 40px;
+  color: var(--light-color);
+}
+
+#main-decoration .circle {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%);
+  border: 5px double var(--dimer-color);
+  border-radius: 50%;
+  padding: 8px;
+  height: 5vh;
+  width: auto;
+  box-shadow: 0 0 0 0 var(--darker-main-color);
+  animation: 1s pulse infinite;
+}
+
+#main-decoration i {
+  color: var(--light-color);
+  font-size: 40px;
+  animation: gradient 5s infinite;
+}
+
+h1 {
+  color: var(--main-text-color);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--darkerer-main-color);
+  border-radius: 7.5em 7.5em 4em 4em;
+  margin-top: 5em;
+  width: 95%;
+  padding-bottom: 1.5em;
+  color: var(--main-text-color);
+}
+
+.scrollable {
+  overflow-y: scroll;
+  height: 55vh;
+  padding: 5px;
+  border-radius: 2.5em;
+}
+
+section h2 {
+  color: var(--main-text-color);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.title h2 {
+  color: var(--main-text-color);
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+.title i {
+  margin-left: 1em;
+  color: var(--light-color);
+}
+
+#description .title {
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container aside {
+  width: 50%;
+  margin-right: 6em;
+  margin-left: 3em;
+}
+
+#description .container aside p {
+  background-color: var(--lighter-main-color);
+  padding: 2em;
+  border-radius: 50px;
+}
+
+.card {
+  background-color: var(--lighter-main-color);
+  display: flex;
+}
+
+#description .container .card {
+  display: flex;
+  width: 50%;
+  margin-right: 4em;
+  border-radius: 50px;
+}
+
+#description .container img {
+  width: 50%;
+  border-radius: 50px 0px 0px 50px;
+  border-right: 0.3em solid var(--lighterer-main-color);
+}
+
+#description .container .card .text {
+  width: 50%;
+  margin: 1em;
+}
+
+#campus {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+#campus .card {
+  border-radius: 2rem;
+  flex-direction: row;
+  position: relative;
+  border: 0.3em solid var(--darkerer-main-color);
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+#campus .card img {
+  width: 30vh;
+  border-radius: 1.7em 0em 0em 1.7em;
+  border-right: 0.3em solid var(--lighterer-main-color);
+}
+
+#campus .card .text {
+  color: white;
+}
+
+#campus .card .text h4 {
+  margin: 2.5em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 0.4em;
+  font-size: 1.3em;
+}
+
+#campus .card .text .phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#campus .card .text .phone p {
+  margin: 0.5em;
+}
+
+#campus .card p {
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  margin-bottom: 0em;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#specialite {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+#specialite .card {
+  flex-direction: column;
+  align-items: center;
+  min-width: min-content;
+  padding: 1em;
+  border-radius: 25px;
+  height: 75%;
+}
+
+#specialite .card img {
+  height: 30vh;
+  width: 25vw;
+  border-radius: 25px;
+  transition: 1s;
+}
+
+#specialite .card h3 {
+  text-transform: uppercase;
+  text-align: center;
+  transition: 1s;
+}
+
+#specialite .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#specialite .button button {
+  width: 90%;
+}
+
+#specialite .card:hover img {
+  transform: scale(1.03);
+}
+
+#specialite .card:hover h3 {
+  transform: scale(1.03);
+}
+
+#specialite .button button:hover {
+  border: 2px solid var(--dark-color);
+  transform: scale(1.1);
+  background-color: var(--lighter-main-color);
+}
+
+#ionis .container {
+  flex-direction: column;
+}
+
+#ionis .text {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#ionis .text .card {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  border-radius: 5em;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ionis .text .card img {
+  border-radius: 5em;
+  margin: 2em;
+}
+
+#ionis .key-elements {
+  flex-direction: row;
+  display: flex;
+  padding-bottom: 1em;
+}
+
+#ionis .key-elements .card {
+  width: 25%;
+  border-radius: 5em;
+  background-color: var(--main-color);
+  flex-direction: row;
+}
+
+#ionis .card i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5em;
+  margin-left: 1.5em;
+}
+
+#ionis .card h4 {
+  margin: 0.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  width: 65%;
+}
+
+#ionis .card p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  margin-left: 0;
+  margin-right: 2em;
+}
+
+#spacing {
+  height: 8em;
+}
+
+#trombinoscope h2 {
+  text-align: center;
+  color: var(--light-color);
+}
+
+#trombinoscope #grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em 0.5em;
+}
+
+#trombinoscope #grid .card {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+#trombinoscope #grid .card img {
+  border: solid 0.5em var(--main-color);
+}
+
+#trombinoscope #grid .card .text {
+  margin-left: 2.5em;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#trombinoscope #grid .card .text p {
+  margin: 0.3em;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--main-color);
+  margin-top: 4em;
+  width: 100%;
+}
+
+footer img {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+footer #text {
+  max-width: 30%;
+  color: var(--light-color);
+}
+
+footer #socials {
+  color: var(--main-text-color);
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+footer #socials a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+footer #socials a i {
+  margin: 5px;
+}
+
+footer #menu {
+  color: var(--light-color);
+  margin: 1em;
+}
+
+@keyframes dropdown {
+  to {
+    height: 4em;
+  }
+}
+
+@keyframes apear {
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 2.5px var(--lighter-main-color);
+  }
+}
+
+@keyframes gradient {
+  to {
+    color: var(--lighter-main-color);
+  }
+}
