@@ -220,6 +220,7 @@ header:hover input.toggle:checked + label div#navbar a {
 
 h1 {
   color: var(--main-text-color);
+  text-align: center;
 }
 
 section {
@@ -475,37 +476,6 @@ section h2 {
 
 #spacing {
   height: 8em;
-}
-
-#trombinoscope h2 {
-  text-align: center;
-  color: var(--light-color);
-}
-
-#trombinoscope #grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2em 0.5em;
-}
-
-#trombinoscope #grid .card {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-
-#trombinoscope #grid .card img {
-  border: solid 0.5em var(--main-color);
-}
-
-#trombinoscope #grid .card .text {
-  margin-left: 2.5em;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
-#trombinoscope #grid .card .text p {
-  margin: 0.3em;
 }
 
 footer {

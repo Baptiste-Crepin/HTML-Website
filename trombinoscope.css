@@ -1,0 +1,222 @@
+@import "./fontawesome/css/all.css";
+
+:root {
+  --lighterer-main-color: #b0abd3;
+  --lighter-main-color: #6258a7;
+  --main-color: #3b2f92;
+  --darker-main-color: #1d1749;
+  --darkerer-main-color: #17123a;
+
+  --main-text-color: #ffffff;
+
+  --light-color: #ffffff;
+  --dimer-color: #a9a9a9;
+  --dark-color: #000000;
+}
+
+body {
+  margin: 0;
+  background-color: var(--darker-main-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 0.2em solid var(--light-color);
+  transition: 2s;
+  background-color: var(--main-color);
+  z-index: 1000;
+}
+
+header aside img {
+  width: 5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-size: 1.2em;
+  color: var(--main-text-color);
+  transition: 2s;
+}
+
+header #center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header #socials {
+  color: var(--main-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 10em;
+  transition: 1.5s;
+}
+
+header #socials a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: 1.5s;
+}
+
+button {
+  border: 2px solid var(--light-color);
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+  transition: 1.5s;
+}
+
+button :hover {
+  background-color: var(--main-color);
+}
+
+header:hover {
+  background-color: var(--light-color);
+  border-bottom: 0.2em solid var(--main-color);
+}
+
+header:hover img {
+  content: url(Medias/Logo/logo-supinfo.png);
+}
+
+header:hover p {
+  color: var(--main-color);
+}
+
+header:hover #socials {
+  color: var(--main-color);
+}
+
+header:hover #socials a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+header:hover #socials a:hover {
+  transform: scale(1.5);
+  color: var(--darker-main-color);
+}
+
+header:hover button {
+  border: 2px solid var(--dark-color);
+}
+
+header:hover button:hover {
+  border: 2px solid var(--dark-color);
+  transform: scale(1.1);
+  background-color: var(--lighter-main-color);
+}
+
+input.toggle {
+  opacity: 0;
+  position: absolute;
+}
+
+nav i {
+  transform: scale(3);
+  color: var(--light-color);
+}
+
+header:hover nav i {
+  transform: scale(3);
+  color: var(--main-color);
+}
+
+div#navbar {
+  position: absolute;
+  left: 0;
+  top: 6em;
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: 0.5s dropdown;
+  transition: 2s;
+}
+
+div#navbar a {
+  text-decoration: none;
+  color: var(--light-color);
+  opacity: 0;
+  transition: 2s;
+}
+
+input.toggle:checked + label div#navbar {
+  height: 4em;
+  background-color: var(--main-color);
+  border-bottom: 0.3em solid var(--light-color);
+  border-top: 0.3em solid var(--darker-main-color);
+  transition: 2s;
+}
+
+input.toggle:checked + label div#navbar a {
+  font-size: 1.3em;
+  text-align: center;
+  animation: 1.2s apear forwards;
+}
+
+header:hover input.toggle:checked + label div#navbar {
+  background-color: var(--light-color);
+  border-bottom: 0.2em solid var(--main-color);
+}
+
+header:hover input.toggle:checked + label div#navbar a {
+  color: var(--main-color);
+}
+
+@keyframes dropdown {
+  to {
+    height: 4em;
+  }
+}
+
+@keyframes apear {
+  to {
+    opacity: 100%;
+  }
+}
+
+#trombinoscope h2 {
+    text-align: center;
+    color: var(--light-color);
+  }
+  
+  #trombinoscope #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em 0.5em;
+  }
+  
+  #trombinoscope #grid .card {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    background-color: var(--lighter-main-color);
+    display: flex;
+  }
+  
+  #trombinoscope #grid .card img {
+    border: solid 0.5em var(--main-color);
+  }
+  
+  #trombinoscope #grid .card .text {
+    margin-left: 2.5em;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #trombinoscope #grid .card .text p {
+    margin: 0.3em;
+  }
+  

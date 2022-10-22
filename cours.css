@@ -1,0 +1,575 @@
+@import "./fontawesome/css/all.css";
+
+:root {
+  --lighterer-main-color: #b0abd3;
+  --lighter-main-color: #6258a7;
+  --main-color: #3b2f92;
+  --darker-main-color: #1d1749;
+  --darkerer-main-color: #17123a;
+
+  --main-text-color: #ffffff;
+
+  --light-color: #ffffff;
+  --dimer-color: #a9a9a9;
+  --dark-color: #000000;
+}
+
+body {
+  margin: 0;
+  background-color: var(--darker-main-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 0.2em solid var(--light-color);
+  transition: 2s;
+  background-color: var(--main-color);
+  z-index: 1000;
+}
+
+header aside img {
+  width: 5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-size: 1.2em;
+  color: var(--main-text-color);
+  transition: 2s;
+}
+
+header #center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header #socials {
+  color: var(--main-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 10em;
+  transition: 1.5s;
+}
+
+header #socials a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: 1.5s;
+}
+
+button {
+  border: 2px solid var(--light-color);
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+  transition: 1.5s;
+}
+
+button :hover {
+  background-color: var(--main-color);
+}
+
+header:hover {
+  background-color: var(--light-color);
+  border-bottom: 0.2em solid var(--main-color);
+}
+
+header:hover img {
+  content: url(Medias/Logo/logo-supinfo.png);
+}
+
+header:hover p {
+  color: var(--main-color);
+}
+
+header:hover #socials {
+  color: var(--main-color);
+}
+
+header:hover #socials a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+header:hover #socials a:hover {
+  transform: scale(1.5);
+  color: var(--darker-main-color);
+}
+
+header:hover button {
+  border: 2px solid var(--dark-color);
+}
+
+header:hover button:hover {
+  border: 2px solid var(--dark-color);
+  transform: scale(1.1);
+  background-color: var(--lighter-main-color);
+}
+
+input.toggle {
+  opacity: 0;
+  position: absolute;
+}
+
+nav i {
+  transform: scale(3);
+  color: var(--light-color);
+}
+
+header:hover nav i {
+  transform: scale(3);
+  color: var(--main-color);
+}
+
+div#navbar {
+  position: absolute;
+  left: 0;
+  top: 6em;
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: 0.5s dropdown;
+  transition: 2s;
+}
+
+div#navbar a {
+  text-decoration: none;
+  color: var(--light-color);
+  opacity: 0;
+  transition: 2s;
+}
+
+input.toggle:checked + label div#navbar {
+  height: 4em;
+  background-color: var(--main-color);
+  border-bottom: 0.3em solid var(--light-color);
+  border-top: 0.3em solid var(--darker-main-color);
+  transition: 2s;
+}
+
+input.toggle:checked + label div#navbar a {
+  font-size: 1.3em;
+  text-align: center;
+  animation: 1.2s apear forwards;
+}
+
+header:hover input.toggle:checked + label div#navbar {
+  background-color: var(--light-color);
+  border-bottom: 0.2em solid var(--main-color);
+}
+
+header:hover input.toggle:checked + label div#navbar a {
+  color: var(--main-color);
+}
+
+@keyframes dropdown {
+  to {
+    height: 4em;
+  }
+}
+
+@keyframes apear {
+  to {
+    opacity: 100%;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--darker-main-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 0.2em solid var(--light-color);
+  transition: 2s;
+  background-color: var(--main-color);
+  z-index: 1000;
+}
+
+header aside img {
+  width: 5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+header p {
+  font-size: 1.2em;
+  color: var(--main-text-color);
+  transition: 2s;
+}
+
+header #center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header #socials {
+  color: var(--main-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 10em;
+  transition: 1.5s;
+}
+
+header #socials a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: 1.5s;
+}
+
+button {
+  border: 2px solid var(--light-color);
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+  transition: 1.5s;
+}
+
+button :hover {
+  background-color: var(--main-color);
+}
+
+header:hover {
+  background-color: var(--light-color);
+  border-bottom: 0.2em solid var(--main-color);
+}
+
+header:hover img {
+  content: url(Medias/Logo/logo-supinfo.png);
+}
+
+header:hover p {
+  color: var(--main-color);
+}
+
+header:hover #socials {
+  color: var(--main-color);
+}
+
+header:hover #socials a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+header:hover #socials a:hover {
+  transform: scale(1.5);
+  color: var(--darker-main-color);
+}
+
+header:hover button {
+  border: 2px solid var(--dark-color);
+}
+
+header:hover button:hover {
+  border: 2px solid var(--dark-color);
+  transform: scale(1.1);
+  background-color: var(--lighter-main-color);
+}
+
+input.toggle {
+  opacity: 0;
+  position: absolute;
+}
+
+nav i {
+  transform: scale(3);
+  color: var(--light-color);
+}
+
+header:hover nav i {
+  transform: scale(3);
+  color: var(--main-color);
+}
+
+div#navbar {
+  position: absolute;
+  left: 0;
+  top: 6em;
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: 0.5s dropdown;
+  transition: 2s;
+}
+
+div#navbar a {
+  text-decoration: none;
+  color: var(--light-color);
+  opacity: 0;
+  transition: 2s;
+}
+
+input.toggle:checked + label div#navbar {
+  height: 4em;
+  background-color: var(--main-color);
+  border-bottom: 0.3em solid var(--light-color);
+  border-top: 0.3em solid var(--darker-main-color);
+  transition: 2s;
+}
+
+input.toggle:checked + label div#navbar a {
+  font-size: 1.3em;
+  text-align: center;
+  animation: 1.2s apear forwards;
+}
+
+header:hover input.toggle:checked + label div#navbar {
+  background-color: var(--light-color);
+  border-bottom: 0.2em solid var(--main-color);
+}
+
+header:hover input.toggle:checked + label div#navbar a {
+  color: var(--main-color);
+}
+
+@keyframes dropdown {
+  to {
+    height: 4em;
+  }
+}
+
+@keyframes apear {
+  to {
+    opacity: 100%;
+  }
+}
+
+
+
+h1, p {
+    color: var(--main-text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 0.2em solid var(--light-color);
+    transition: 1s;
+    background-color: var(--main-color);
+    z-index: 1000;
+}
+
+header aside img {
+    width: 5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    font-size: 1.2em;
+    color: var(--light-color);
+    transition: 1s;
+}
+
+header #center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header #socials {
+    color: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 10em;
+    transition: 1.5s;
+}
+
+header #socials a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: 1.5s;
+}
+
+button {
+    border: 2px solid var(--light-color);
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 25px;
+    background-color: var(--main-color);
+    color: var(--light-color);
+    transition: 1.5s;
+}
+
+button :hover{
+    background-color: var(--main-color);
+}
+
+header:hover {
+    background-color: var(--light-color);
+    border-bottom: 0.2em solid var(--main-color);
+}
+
+header:hover img {
+    content: url(Medias/Logo/logo-supinfo.png);
+}
+
+header:hover p {
+    color: var(--main-color);
+}
+
+header:hover #socials {
+    color: var(--main-color);
+}
+
+header:hover #socials a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+header:hover #socials a:hover {
+    transform: scale(1.5);
+    color: var(--darker-main-color);
+}
+
+header:hover button {
+    border: 2px solid var(--dark-color);
+}
+
+header:hover button:hover {
+    border: 2px solid var(--dark-color);
+    transform: scale(0.9);
+    background-color: var(--lighter-main-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-color: var(--darker-main-color);
+}
+#scroll_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    bottom: 50px;
+    right: 30px;
+    background-color: var(--lighterer-main-color);
+}
+#arrow{
+    color: var(--dark-color);
+}
+h3{
+    margin-bottom: 0;
+}
+p{
+    margin-top: 0.3em;
+}
+#hdp{
+
+    color:rgb(96, 40, 147);
+}
+#txt{
+    display: flex;
+    flex-direction: column;
+}
+#picture{
+    float: left;
+}
+#title{
+    margin: auto;
+    text-align: center;
+    color: black;
+}
+
+#fond-title {
+
+    width: 650px;
+    height: 70px;
+}
+fieldset {
+    border-color: var(--light-color);
+    border-radius: 10px;
+    margin: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+legend{
+    color:  var(--light-color) ;
+}
+.txt{
+    color: var(--light-color);
+}
+.foottxtl{
+    color: white;
+    font-size: small;
+    margin-left: 10px;
+}
+ul{
+    color: var( --light-color);
+}
+
+.pdgrp{
+    color:var(--light-color) ;
+}
+footer{
+    background-color:var(--main-color) ;
+    width: 100%;
+}
+#bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--main-color);
+}
+footer #rsocial {
+    color: var(--light-color);
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2em;
+    transition: 1.5s;
+}
+footer #rsocial a{
+    margin: 5px;
+    color: var(--light-color);
+    text-decoration: none;
+    transition: 1.5s;
+}
+#menu{
+    color: var(--light-color);
+    margin: 1em;
+}
+#txtbottom{
+    max-width: 30%;
+    color: var(--light-color);
+}
+#imgfoot {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
