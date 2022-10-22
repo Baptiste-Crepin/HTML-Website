@@ -128,7 +128,6 @@ nav i {
 }
 
 header:hover nav i {
-  transform: scale(3);
   color: var(--main-color);
 }
 
@@ -187,36 +186,207 @@ header:hover input.toggle:checked + label div#navbar a {
   }
 }
 
+#spacing {
+  height: 10em;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #trombinoscope h2 {
-    text-align: center;
-    color: var(--light-color);
+  text-align: center;
+  color: var(--light-color);
+}
+
+#trombinoscope #grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2em 0.5em;
+}
+
+#trombinoscope #grid .card {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  background-color: var(--lighter-main-color);
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+}
+
+#trombinoscope #grid .card img {
+  border: solid 0.5em var(--main-color);
+}
+
+#trombinoscope #grid .card .text {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.4em;
+}
+
+#trombinoscope #grid .card .text p {
+  margin: 0.3em;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--main-color);
+  width: 100%;
+  margin-top: 2em;
+  padding-top: 2em;
+}
+
+footer img {
+  width: 7em;
+  height: 7em;
+}
+
+footer h2 {
+  margin-top: 0;
+}
+
+footer #infos {
+  max-width: 30%;
+  color: var(--light-color);
+}
+
+footer #socials {
+  display: flex;
+  justify-content: space-evenly;
+  width: 10%;
+}
+
+footer #socials a {
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+footer #redirect {
+  color: var(--light-color);
+}
+
+/* responsive on phones */
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
   }
-  
+
+  header aside img {
+    width: 3em;
+  }
+
+  header p {
+    font-size: 0.8em;
+    margin-top: 0;
+  }
+
+  nav {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  nav i {
+    transform: scale(1.5);
+  }
+
+  div#navbar {
+    top: 10em;
+  }
+
+  input.toggle:checked + label div#navbar {
+    flex-direction: column;
+    top: 9.5em;
+    height: 11em;
+  }
+
+  input.toggle:checked + label div#navbar a {
+    font-size: 1em;
+  }
+
   #trombinoscope #grid {
-    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em 0.5em;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer img {
+    width: 0;
+    height: 0;
+  }
+
+  footer #infos {
+    max-width: 90%;
+  }
+
+  footer #socials {
+    width: 30%;
+  }
+
+  footer #redirect {
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* responsive on tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  header {
+    height: 6em;
+  }
+
+  header aside img {
+    width: 4em;
+  }
+
+  header p {
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  input.toggle:checked + label div#navbar a {
+    font-size: 1.1em;
+  }
+
+  #trombinoscope #grid {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em 0.5em;
   }
-  
-  #trombinoscope #grid .card {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    background-color: var(--lighter-main-color);
-    display: flex;
-  }
-  
-  #trombinoscope #grid .card img {
-    border: solid 0.5em var(--main-color);
-  }
-  
-  #trombinoscope #grid .card .text {
-    margin-left: 2.5em;
-    justify-content: center;
-    display: flex;
+
+  footer {
     flex-direction: column;
+    align-items: center;
   }
-  
-  #trombinoscope #grid .card .text p {
-    margin: 0.3em;
+
+  footer img {
+    width: 0;
+    height: 0;
   }
-  
+
+  footer #infos {
+    max-width: 90%;
+  }
+
+  footer #socials {
+    width: 30%;
+  }
+
+  footer #redirect {
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+  }
+}

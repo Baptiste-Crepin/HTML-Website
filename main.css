@@ -14,6 +14,10 @@
   --dark-color: #000000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: var(--darker-main-color);
@@ -74,6 +78,7 @@ button {
   background-color: var(--main-color);
   color: var(--main-text-color);
   transition: 1.5s;
+  width: 100%;
 }
 
 button :hover {
@@ -128,7 +133,6 @@ nav i {
 }
 
 header:hover nav i {
-  transform: scale(3);
   color: var(--main-color);
 }
 
@@ -216,6 +220,13 @@ header:hover input.toggle:checked + label div#navbar a {
   color: var(--light-color);
   font-size: 40px;
   animation: gradient 5s infinite;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -325,7 +336,7 @@ section h2 {
 }
 
 #campus .card img {
-  width: 30vh;
+  width: 25vw;
   border-radius: 1.7em 0em 0em 1.7em;
   border-right: 0.3em solid var(--lighterer-main-color);
 }
@@ -366,6 +377,7 @@ section h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
+  width: 90%;
 }
 
 #specialite .card {
@@ -379,7 +391,7 @@ section h2 {
 
 #specialite .card img {
   height: 30vh;
-  width: 25vw;
+  width: 90%;
   border-radius: 25px;
   transition: 1s;
 }
@@ -442,7 +454,7 @@ section h2 {
 #ionis .key-elements {
   flex-direction: row;
   display: flex;
-  padding-bottom: 1em;
+  padding-bottom: 3em;
 }
 
 #ionis .key-elements .card {
@@ -474,49 +486,43 @@ section h2 {
   margin-right: 2em;
 }
 
-#spacing {
-  height: 8em;
-}
-
 footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background-color: var(--main-color);
-  margin-top: 4em;
   width: 100%;
+  margin-top: 2em;
+  padding-top: 2em;
 }
 
 footer img {
-  margin-top: 10px;
-  margin-left: 10px;
+  width: 7em;
+  height: 7em;
 }
 
-footer #text {
+footer h2 {
+  margin-top: 0;
+}
+
+footer #infos {
   max-width: 30%;
   color: var(--light-color);
 }
 
 footer #socials {
-  color: var(--main-text-color);
   display: flex;
-  flex-direction: row;
-  margin-top: 30px;
-  margin-left: 50px;
+  justify-content: space-evenly;
+  width: 10%;
 }
 
 footer #socials a {
-  text-decoration: none;
-  color: var(--main-text-color);
-}
-
-footer #socials a i {
-  margin: 5px;
-}
-
-footer #menu {
   color: var(--light-color);
-  margin: 1em;
+  text-decoration: none;
+}
+
+footer #redirect {
+  color: var(--light-color);
 }
 
 @keyframes dropdown {
@@ -540,5 +546,283 @@ footer #menu {
 @keyframes gradient {
   to {
     color: var(--lighter-main-color);
+  }
+}
+
+/* responsive on phones */
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+
+  header aside img {
+    width: 3em;
+  }
+
+  header p {
+    font-size: 0.8em;
+    margin-top: 0;
+  }
+
+  nav {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  nav i {
+    transform: scale(1.5);
+  }
+
+  div#navbar {
+    top: 10em;
+  }
+
+  input.toggle:checked + label div#navbar {
+    flex-direction: column;
+    top: 9.5em;
+    height: 11em;
+  }
+
+  input.toggle:checked + label div#navbar a {
+    font-size: 1em;
+  }
+
+  #spacing {
+    height: 12em;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  /*TODO */
+  .container {
+    flex-direction: column;
+  }
+
+  .container aside {
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+
+  #description .container .card {
+    flex-direction: column;
+    width: 90%;
+    border-radius: 50px;
+    margin-right: 0;
+  }
+
+  #description .container img {
+    display: flex;
+    border-radius: 50px 50px 0px 0px;
+    flex-direction: column;
+    border-right: 0;
+    width: 100%;
+    height: 30vh;
+    border-bottom: 0.3em solid var(--lighterer-main-color);
+  }
+
+  #description .container .card .text {
+    width: 90%;
+  }
+
+  .scrollable {
+    height: 65vh;
+  }
+
+  #specialite {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.3em;
+  }
+
+  #specialite .card {
+    height: 85%;
+    padding-bottom: 0;
+  }
+
+  .title {
+    flex-direction: column;
+  }
+
+  .title h2 {
+    font-size: 1.2em;
+    width: 80%;
+    text-align: center;
+  }
+
+  .title i {
+    margin: 0;
+  }
+
+  #ionis .text .card img {
+    width: 70%;
+  }
+
+  #ionis .key-elements {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ionis .card p {
+    margin: 0.5em;
+  }
+
+  #ionis .key-elements .card {
+    border-radius: 5em;
+    flex-direction: row;
+    margin: 0.3em;
+    width: 80%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer img {
+    width: 0;
+    height: 0;
+  }
+
+  footer #infos {
+    max-width: 90%;
+  }
+
+  footer #socials {
+    width: 30%;
+  }
+
+  footer #redirect {
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* responsive on tablet */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  header {
+    height: 6em;
+  }
+
+  header aside img {
+    width: 4em;
+  }
+
+  header p {
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  input.toggle:checked + label div#navbar a {
+    font-size: 1.1em;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  /*TODO */
+  .container {
+    flex-direction: column;
+  }
+
+  .container aside {
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+
+  #description .container .card {
+    flex-direction: column;
+    width: 90%;
+    border-radius: 50px;
+    margin-right: 0;
+  }
+
+  #description .container img {
+    display: flex;
+    border-radius: 50px 50px 0px 0px;
+    flex-direction: column;
+    border-right: 0;
+    width: 100%;
+    height: 30vh;
+    border-bottom: 0.3em solid var(--lighterer-main-color);
+  }
+
+  #description .container .card .text {
+    width: 90%;
+  }
+
+  .scrollable {
+    height: 65vh;
+  }
+
+  #specialite {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+
+  .title {
+    flex-direction: column;
+  }
+
+  .title h2 {
+    font-size: 1.2em;
+    width: 80%;
+    text-align: center;
+  }
+
+  .title i {
+    margin: 0;
+  }
+
+  #ionis .text .card img {
+    width: 70%;
+  }
+
+  #ionis .key-elements {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ionis .card p {
+    margin: 0.5em;
+  }
+
+  #ionis .key-elements .card {
+    border-radius: 5em;
+    flex-direction: row;
+    margin: 0.3em;
+    width: 80%;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer img {
+    width: 0;
+    height: 0;
+  }
+
+  footer #infos {
+    max-width: 90%;
+  }
+
+  footer #socials {
+    width: 30%;
+  }
+
+  footer #redirect {
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
   }
 }
