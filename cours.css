@@ -5,8 +5,8 @@
 
   --background: #e2e2e2;
 
-  --main-color: #5f7367;
-  --lighter-main-color: #587d71;
+  --card-color: #4d5061;
+  --sub-card-color: #3b2f92;
 
   --main-text-color: #e2e2e2;
 
@@ -101,7 +101,7 @@ header:hover button {
 header:hover button:hover {
   border: 2px solid var(--dark-color);
   transform: scale(1.1);
-  background-color: var(--lighter-main-color);
+  background-color: var(--sub-card-color);
 }
 
 h1 {
@@ -110,7 +110,7 @@ h1 {
 }
 
 .card {
-  background-color: var(--lighter-main-color);
+  background-color: var(--sub-card-color);
   display: flex;
   width: 70%;
 }
@@ -210,21 +210,23 @@ p {
 }
 
 fieldset {
-  background-color: var(--lighter-main-color);
+  background-color: var(--sub-card-color);
   display: flex;
   border-color: var(--light-color);
   border-radius: 10px;
   margin-top: 2em;
   margin-bottom: 2em;
   width: 75%;
+  border: solid 2.5em var(--card-color);
 }
 
 legend {
   color: var(--main-text-color);
-  background-color: var(--lighter-main-color);
-  border-radius: 50px;
+  background-color: var(--sub-card-color);
+  border-radius: 25px;
   padding-left: 1em;
   padding-right: 1em;
+  border: solid 1.5em var(--card-color);
 }
 
 ul {

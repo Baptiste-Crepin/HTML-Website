@@ -193,52 +193,58 @@ main {
 }
 
 #spacing {
-  height: 10em;
+  height: 8em;
 }
 
-#container {
+#grille {
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
 }
 
-#trombinoscope h2 {
-  text-align: center;
-  color: var(--dark-color);
+table {
+  border: solid var(--sub-card-color);
+  border-collapse: collapse;
 }
 
-#trombinoscope #grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2em 0.5em;
-  background-color: var(--card-color);
-  padding: 3em;
-  border-radius: 50px;
-}
-
-#trombinoscope #grid .card {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  background-color: var(--sub-card-color);
-  display: flex;
-  flex-direction: column;
-  width: min-content;
-}
-
-#trombinoscope #grid .card img {
-  border: solid 0.5em var(--card-color);
-}
-
-#trombinoscope #grid .card .text {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  margin-left: 0.4em;
+tr {
   color: var(--main-text-color);
 }
 
-#trombinoscope #grid .card .text p {
-  margin: 0.3em;
+th {
+  background-color: var(--card-color);
+  border: solid var(--sub-card-color);
+}
+
+td {
+  padding: 0;
+  width: 13vh;
+  height: 6vh;
+  border-top: solid var(--card-color);
+  border-left: solid var(--card-color);
+  color: var(--main-text-color);
+  text-align: center;
+  background-color: var(--sub-card-color);
+}
+
+.rentre {
+  background-color: lightpink;
+  color: var(--dark-color);
+}
+
+.html {
+  background-color: hotpink;
+  color: var(--dark-color);
+}
+
+.css {
+  background-color: deeppink;
+  color: var(--dark-color);
+}
+
+#midi {
+  background-color: violet;
+  color: var(--dark-color);
 }
 
 footer {
@@ -271,7 +277,7 @@ footer #socials {
 }
 
 footer #socials a {
-  color: var(--light-color);
+  color: var(--main-text-color);
   text-decoration: none;
 }
 
@@ -317,9 +323,18 @@ footer #redirect {
     font-size: 1em;
   }
 
-  #trombinoscope #grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2em 0.5em;
+  #spacing {
+    height: 12em;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  td {
+    width: 6vw;
+    height: 3vh;
+    font-size: 0.8em;
   }
 
   footer {
@@ -368,9 +383,13 @@ footer #redirect {
     font-size: 1.1em;
   }
 
-  #trombinoscope #grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2em 0.5em;
+  h1 {
+    font-size: 1.8em;
+  }
+
+  td {
+    width: 10vh;
+    height: 5vh;
   }
 
   footer {

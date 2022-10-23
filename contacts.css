@@ -5,8 +5,8 @@
 
   --background: #e2e2e2;
 
-  --main-color: #5f7367;
-  --lighter-main-color: #587d71;
+  --card-color: #4d5061;
+  --sub-card-color: #3b2f92;
 
   --main-text-color: #e2e2e2;
 
@@ -101,7 +101,7 @@ header:hover button {
 header:hover button:hover {
   border: 2px solid var(--dark-color);
   transform: scale(1.1);
-  background-color: var(--lighter-main-color);
+  background-color: var(--sub-card-color);
 }
 
 h1 {
@@ -110,7 +110,7 @@ h1 {
 }
 
 .card {
-  background-color: var(--lighter-main-color);
+  background-color: var(--sub-card-color);
   display: flex;
   width: 70%;
 }

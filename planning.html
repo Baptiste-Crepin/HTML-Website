@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="UTF-8">
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keybord" content="information,school">
   <meta name="author" content="Baptiste Crepin, Loïc Verdier">
-  <link rel="stylesheet" href="./contacts.css" media="all" type="text/css">
+  <link rel="stylesheet" href="planning.css" media="all" type="text/css">
   <link rel="icon" href="Medias/favicon-supinfo.png" sizes="192x192">
-  <title>Contacts</title>
+  <title>programe année 1 </title>
 </head>
 
 <body>
@@ -51,70 +52,74 @@
 
   </header>
 
+  <main class="planning">
+    <div id="spacing"></div>
 
-  <!-- flèche remonter en haut de la page-->
-  <div id="scroll_top">
-    <a href="#top"><i class="fa-solid fa-arrow-up" id="arrow"></i></a>
-  </div>
+    <div id="grille">
 
-  <div id="spacing"></div>
+      <table>
+        <th colspan="10">
+          <h3> Emploie du temps</h3>
+        </th>
 
-  <main>
-    <div id="title">
-      <h1>Contact</h1>
-    </div>
+        <tr>
+          <td></td>
+          <td>Lundi</td>
+          <td>Mardi</td>
+          <td>Mercredi</td>
+          <td>Jeudi</td>
+          <td>Vendredi</td>
+        </tr>
 
+        <tr>
+          <td>9h - 10h</td>
+          <td rowspan="3" class="rentre">rentrée</td>
+          <td rowspan="3" class="html">HTML</td>
+          <td rowspan="3" class="html">HTML</td>
+          <td rowspan="3" class="css">CSS</td>
+          <td rowspan="3" class="css">CSS</td>
 
-    <div class="card">
-      <h3>Pour permettre à Supinfo de vous contacter merci de remplir le formulaire suivant ou de contacter
-        Supinfo via les informations de la page contact </h3>
-      <form>
+        </tr>
 
-        <section>
-          <div class="ensemble">
-            <label for="lastname">Nom *</label>
-            <input type="text" id="lastname" required>
-          </div>
+        <tr>
+          <td>10h - 11h</td>
+        </tr>
 
-          <div class="ensemble">
-            <label for="name">Prénom *</label>
-            <input type="text" id="name" required>
-          </div>
-        </section>
+        <tr>
+          <td>11h - 12h</td>
+        </tr>
 
-        <section>
-          <div class="ensemble">
-            <label for="email">Email *</label>
-            <input type="email" id="email" required>
-          </div>
+        <tr>
+          <td>12h - 13h</td>
+          <td colspan="10" id="midi">pause du midi</td>
 
-          <div class="ensemble">
-            <label for="phone">Téléphone</label>
-            <input type="tel" id="phone" />
-          </div>
-        </section>
+        </tr>
 
-        <label for="message">Message *</label>
-        <textarea id="message" placeholder="Veuillez entrer votre message..." required></textarea>
+        <tr>
+          <td>13h - 14h</td>
+          <td rowspan="4" class="rentre">rentrée</td>
+          <td rowspan="4" class="html">HTML </td>
+          <td rowspan="4" class="html">HTML</td>
+          <td rowspan="4" class="css">CSS</td>
+          <td rowspan="4" class="css">CSS</td>
+        </tr>
 
-        <label for="campsus">Campus a contacter</label>
-        <select id="campsus" required>
-          <option value="0">-- Selectionnez un campus --</option>
-          <option value="1">Lille</option>
-          <option value="2">Lyon</option>
-          <option value="3">Paris</option>
-          <option value="4">Caen</option>
-          <option value="5">Tours</option>
-        </select>
+        <tr>
+          <td>14h - 15h</td>
+        </tr>
 
-        <div class="ensemble">
-          <input type="submit" value="envoyer" id="envoyer">
-          <input type="reset" value="reset">
-        </div>
-      </form>
+        <tr>
+          <td>15h - 16h</td>
+        </tr>
+
+        <tr>
+          <td>16h - 17h</td>
+
+        </tr>
+
+      </table>
     </div>
   </main>
-
   <footer>
 
     <img src="./Medias/Logo/logo-supinfo-white.png" alt="logo supinfo">

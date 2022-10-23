@@ -5,8 +5,8 @@
 
   --background: #e2e2e2;
 
-  --main-color: #5f7367;
-  --lighter-main-color: #587d71;
+  --card-color: #4d5061;
+  --sub-card-color: #3b2f92;
 
   --main-text-color: #e2e2e2;
 
@@ -120,7 +120,7 @@ header:hover button {
 header:hover button:hover {
   border: 2px solid var(--dark-color);
   transform: scale(1.1);
-  background-color: var(--lighter-main-color);
+  background-color: var(--sub-card-color);
 }
 
 input.toggle {
@@ -180,6 +180,18 @@ header:hover input.toggle:checked + label div#navbar a {
   color: var(--brand-color);
 }
 
+@keyframes dropdown {
+  to {
+    height: 4em;
+  }
+}
+
+@keyframes apear {
+  to {
+    opacity: 100%;
+  }
+}
+
 #main-decoration {
   z-index: -1;
   text-align: center;
@@ -224,6 +236,18 @@ header:hover input.toggle:checked + label div#navbar a {
   animation: gradient 5s infinite;
 }
 
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 2.5px var(--sub-card-color);
+  }
+}
+
+@keyframes gradient {
+  to {
+    color: var(--sub-card-color);
+  }
+}
+
 main {
   display: flex;
   align-items: center;
@@ -242,7 +266,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: var(--card-color);
   border-radius: 7.5em 7.5em 4em 4em;
   margin-top: 5em;
   width: 95%;
@@ -296,13 +320,13 @@ section h2 {
 }
 
 #description .container aside p {
-  background-color: var(--lighter-main-color);
+  background-color: var(--sub-card-color);
   padding: 2em;
   border-radius: 50px;
 }
 
 .card {
-  background-color: var(--lighter-main-color);
+  background-color: var(--sub-card-color);
   display: flex;
 }
 
@@ -334,7 +358,7 @@ section h2 {
   border-radius: 2rem;
   flex-direction: row;
   position: relative;
-  border: 0.3em solid var(--main-color);
+  border: 0.3em solid var(--card-color);
   margin-top: 0.2em;
   margin-bottom: 0.2em;
 }
@@ -414,6 +438,12 @@ section h2 {
   justify-content: center;
 }
 
+#debouches a .button button:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  background-color: #3d5f80;
+}
+
 #specialite .button button {
   width: 90%;
 }
@@ -429,7 +459,7 @@ section h2 {
 #specialite .button button:hover {
   border: 2px solid var(--dark-color);
   transform: scale(1.1);
-  background-color: var(--lighter-main-color);
+  background-color: var(--sub-card-color);
 }
 
 #ionis .container {
@@ -464,9 +494,9 @@ section h2 {
 }
 
 #ionis .key-elements .card {
-  width: 25%;
+  width: 90%;
   border-radius: 5em;
-  background-color: var(--main-color);
+  background-color: var(--card-color);
   flex-direction: row;
 }
 
@@ -485,11 +515,14 @@ section h2 {
   width: 65%;
 }
 
-#ionis .card p {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  margin-left: 0;
-  margin-right: 2em;
+#ionis section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  margin-top: 0;
+  padding-bottom: 0;
 }
 
 footer {
@@ -522,36 +555,12 @@ footer #socials {
 }
 
 footer #socials a {
-  color: var(--light-color);
+  color: var(--main-text-color);
   text-decoration: none;
 }
 
 footer #redirect {
   color: var(--light-color);
-}
-
-@keyframes dropdown {
-  to {
-    height: 4em;
-  }
-}
-
-@keyframes apear {
-  to {
-    opacity: 100%;
-  }
-}
-
-@keyframes pulse {
-  to {
-    box-shadow: 0 0 0 2.5px var(--lighter-main-color);
-  }
-}
-
-@keyframes gradient {
-  to {
-    color: var(--lighter-main-color);
-  }
 }
 
 /* responsive on phones */
@@ -633,7 +642,24 @@ footer #redirect {
   }
 
   .scrollable {
-    height: 65vh;
+    height: 73vh;
+  }
+
+  #campus .card {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+  }
+
+  #campus .card img {
+    border-radius: 1.7em;
+    max-width: 14em;
+    border-right: 0;
+    width: auto;
+  }
+
+  #campus .card .text h4 {
+    margin-top: 1em;
   }
 
   #specialite {
