@@ -71,21 +71,6 @@ header #socials a {
   transition: 1.5s;
 }
 
-button {
-  border: 2px solid var(--light-color);
-  padding: 1rem;
-  width: 10rem;
-  border-radius: 25px;
-  background-color: var(--brand-color);
-  color: var(--main-text-color);
-  transition: 1.5s;
-  width: 100%;
-}
-
-button :hover {
-  background-color: var(--brand-color);
-}
-
 header:hover {
   background-color: var(--light-color);
   border-bottom: 0.2em solid var(--brand-color);
@@ -110,17 +95,7 @@ header:hover #socials a {
 
 header:hover #socials a:hover {
   transform: scale(1.5);
-  color: var(--background);
-}
-
-header:hover button {
-  border: 2px solid var(--dark-color);
-}
-
-header:hover button:hover {
-  border: 2px solid var(--dark-color);
-  transform: scale(1.1);
-  background-color: var(--sub-card-color);
+  color: var(--dark-color);
 }
 
 input.toggle {
@@ -130,6 +105,12 @@ input.toggle {
 
 nav i {
   transform: scale(3);
+  color: var(--light-color);
+}
+
+nav i:hover {
+  transform: scale(3.3);
+  color: red;
   color: var(--light-color);
 }
 
@@ -258,8 +239,8 @@ main {
 }
 
 h1 {
-  color: #000000;
-  text-align: center;
+  opacity: 0;
+  position: absolute;
 }
 
 section {
@@ -430,6 +411,18 @@ section h2 {
   text-transform: uppercase;
   text-align: center;
   transition: 1s;
+  margin-bottom: 0;
+}
+
+button {
+  border: 2px solid var(--light-color);
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 25px;
+  background-color: var(--brand-color);
+  color: var(--main-text-color);
+  transition: 1.5s;
+  width: 100%;
 }
 
 #specialite .button {
@@ -485,6 +478,10 @@ section h2 {
 #ionis .text .card img {
   border-radius: 5em;
   margin: 2em;
+}
+
+#ionis .text .card img:hover {
+  transform: scale(1.2);
 }
 
 #ionis .key-elements {
@@ -551,7 +548,7 @@ footer #infos {
 footer #socials {
   display: flex;
   justify-content: space-evenly;
-  width: 10%;
+  width: 15%;
 }
 
 footer #socials a {
@@ -560,7 +557,23 @@ footer #socials a {
 }
 
 footer #redirect {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 4em;
+  background-color: var(--brand-color);
+  width: min-content;
   color: var(--light-color);
+}
+
+footer #redirect a {
+  font-size: 1.3em;
+  text-align: center;
+  animation: 1.2s apear forwards;
+  text-decoration: none;
+  font-size: 1em;
+  color: var(--main-text-color);
+  margin-bottom: 0.5em;
 }
 
 /* responsive on phones */
@@ -587,6 +600,12 @@ footer #redirect {
     transform: scale(1.5);
   }
 
+  nav i:hover {
+    transform: scale(1.7);
+    color: red;
+    color: var(--light-color);
+  }
+
   div#navbar {
     top: 10em;
   }
@@ -605,11 +624,6 @@ footer #redirect {
     height: 12em;
   }
 
-  h1 {
-    font-size: 1.7em;
-  }
-
-  /*TODO */
   .container {
     flex-direction: column;
   }
@@ -725,11 +739,12 @@ footer #redirect {
   }
 
   footer #redirect {
-    width: 50%;
+    width: 80%;
     align-items: center;
     justify-content: space-evenly;
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    height: auto;
+    margin-top: 1em;
   }
 }
 
@@ -752,11 +767,6 @@ footer #redirect {
     font-size: 1.1em;
   }
 
-  h1 {
-    font-size: 1.8em;
-  }
-
-  /*TODO */
   .container {
     flex-direction: column;
   }
@@ -850,10 +860,14 @@ footer #redirect {
   }
 
   footer #redirect {
-    width: 50%;
+    width: 70%;
     align-items: center;
     justify-content: space-evenly;
-    display: flex;
     flex-direction: row;
+  }
+
+  footer #redirect h2 {
+    opacity: 0;
+    position: absolute;
   }
 }

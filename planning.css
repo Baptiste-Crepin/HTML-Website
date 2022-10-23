@@ -85,23 +85,13 @@ header:hover #socials {
 }
 
 header:hover #socials a {
-  color: var(--brand-color);
+  color: var(--dark-color);
   text-decoration: none;
 }
 
 header:hover #socials a:hover {
   transform: scale(1.5);
-  color: var(--brand-color);
-}
-
-header:hover button {
-  border: 2px solid var(--dark-color);
-}
-
-header:hover button:hover {
-  border: 2px solid var(--dark-color);
-  transform: scale(1.1);
-  background-color: var(--sub-card-color);
+  color: var(--dark-color);
 }
 
 h1 {
@@ -122,6 +112,11 @@ input.toggle {
 
 nav i {
   transform: scale(3);
+  color: var(--light-color);
+}
+
+nav i:hover {
+  transform: scale(3.3);
   color: var(--light-color);
 }
 
@@ -273,7 +268,7 @@ footer #infos {
 footer #socials {
   display: flex;
   justify-content: space-evenly;
-  width: 10%;
+  width: 15%;
 }
 
 footer #socials a {
@@ -282,7 +277,23 @@ footer #socials a {
 }
 
 footer #redirect {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 4em;
+  background-color: var(--brand-color);
+  width: min-content;
   color: var(--light-color);
+}
+
+footer #redirect a {
+  font-size: 1.3em;
+  text-align: center;
+  animation: 1.2s apear forwards;
+  text-decoration: none;
+  font-size: 1em;
+  color: var(--main-text-color);
+  margin-bottom: 0.5em;
 }
 
 /* responsive on phones */
@@ -307,6 +318,11 @@ footer #redirect {
 
   nav i {
     transform: scale(1.5);
+  }
+
+  nav i:hover {
+    transform: scale(1.7);
+    color: var(--light-color);
   }
 
   div#navbar {
@@ -356,11 +372,12 @@ footer #redirect {
   }
 
   footer #redirect {
-    width: 50%;
+    width: 80%;
     align-items: center;
     justify-content: space-evenly;
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    height: auto;
+    margin-top: 1em;
   }
 }
 
