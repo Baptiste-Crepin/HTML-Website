@@ -1,22 +1,23 @@
 @import "./fontawesome/css/all.css";
 
 :root {
-  --lighterer-main-color: #b0abd3;
-  --lighter-main-color: #6258a7;
-  --main-color: #3b2f92;
-  --darker-main-color: #1d1749;
-  --darkerer-main-color: #17123a;
+  --brand-color: #3b2f92;
 
-  --main-text-color: #ffffff;
+  --background: #e2e2e2;
+
+  --main-color: #5f7367;
+  --lighter-main-color: #587d71;
+
+  --main-text-color: #e2e2e2;
 
   --light-color: #ffffff;
-  --dimer-color: #a9a9a9;
+  --dim-color: #a9a9a9;
   --dark-color: #000000;
 }
 
 body {
   margin: 0;
-  background-color: var(--darker-main-color);
+  background-color: var(--brand-color);
 }
 
 header {
@@ -28,7 +29,7 @@ header {
   justify-content: space-around;
   border-bottom: 0.2em solid var(--light-color);
   transition: 2s;
-  background-color: var(--main-color);
+  background-color: var(--brand-color);
   z-index: 1000;
 }
 
@@ -66,23 +67,9 @@ header #socials a {
   transition: 1.5s;
 }
 
-button {
-  border: 2px solid var(--light-color);
-  padding: 1rem;
-  width: 10rem;
-  border-radius: 25px;
-  background-color: var(--main-color);
-  color: var(--main-text-color);
-  transition: 1.5s;
-}
-
-button :hover {
-  background-color: var(--main-color);
-}
-
 header:hover {
   background-color: var(--light-color);
-  border-bottom: 0.2em solid var(--main-color);
+  border-bottom: 0.2em solid var(--brand-color);
 }
 
 header:hover img {
@@ -90,21 +77,21 @@ header:hover img {
 }
 
 header:hover p {
-  color: var(--main-color);
+  color: var(--brand-color);
 }
 
 header:hover #socials {
-  color: var(--main-color);
+  color: var(--brand-color);
 }
 
 header:hover #socials a {
-  color: var(--main-color);
+  color: var(--brand-color);
   text-decoration: none;
 }
 
 header:hover #socials a:hover {
   transform: scale(1.5);
-  color: var(--darker-main-color);
+  color: var(--brand-color);
 }
 
 header:hover button {
@@ -115,6 +102,17 @@ header:hover button:hover {
   border: 2px solid var(--dark-color);
   transform: scale(1.1);
   background-color: var(--lighter-main-color);
+}
+
+h1 {
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.card {
+  background-color: var(--lighter-main-color);
+  display: flex;
+  width: 70%;
 }
 
 input.toggle {
@@ -128,7 +126,7 @@ nav i {
 }
 
 header:hover nav i {
-  color: var(--main-color);
+  color: var(--brand-color);
 }
 
 div#navbar {
@@ -153,9 +151,8 @@ div#navbar a {
 
 input.toggle:checked + label div#navbar {
   height: 4em;
-  background-color: var(--main-color);
+  background-color: var(--brand-color);
   border-bottom: 0.3em solid var(--light-color);
-  border-top: 0.3em solid var(--darker-main-color);
   transition: 2s;
 }
 
@@ -167,11 +164,11 @@ input.toggle:checked + label div#navbar a {
 
 header:hover input.toggle:checked + label div#navbar {
   background-color: var(--light-color);
-  border-bottom: 0.2em solid var(--main-color);
+  border-bottom: 0.2em solid var(--brand-color);
 }
 
 header:hover input.toggle:checked + label div#navbar a {
-  color: var(--main-color);
+  color: var(--brand-color);
 }
 
 @keyframes dropdown {
@@ -188,6 +185,7 @@ header:hover input.toggle:checked + label div#navbar a {
 
 #spacing {
   height: 10em;
+  background-color: var(--background);
 }
 
 main {
@@ -195,11 +193,12 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: var(--background);
 }
 
 h1 {
   text-align: center;
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 
 h3 {
@@ -221,7 +220,11 @@ fieldset {
 }
 
 legend {
-  color: var(--light-color);
+  color: var(--main-text-color);
+  background-color: var(--lighter-main-color);
+  border-radius: 50px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 ul {
@@ -232,9 +235,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: var(--main-color);
+  background-color: var(--brand-color);
   width: 100%;
-  margin-top: 2em;
   padding-top: 2em;
 }
 
