@@ -85,7 +85,7 @@ header:hover #socials {
 }
 
 header:hover #socials a {
-  color: var(--dark-color);
+  color: var(--brand-color);
   text-decoration: none;
 }
 
@@ -186,6 +186,11 @@ main {
   padding-bottom: 2em;
 }
 
+#spacing {
+  height: 8em;
+  background-color: var(--background);
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -213,7 +218,7 @@ input,
 select {
   margin-bottom: 2em;
   width: 15em;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-right: 1em;
   margin-left: 1em;
 }
@@ -238,9 +243,9 @@ section {
   flex-direction: row;
 }
 
-#spacing {
-  height: 8em;
-  background-color: var(--background);
+input#send,
+input#reset {
+  padding: 0.8em;
 }
 
 footer {

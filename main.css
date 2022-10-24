@@ -177,10 +177,11 @@ header:hover input.toggle:checked + label div#navbar a {
   z-index: -1;
   text-align: center;
   background-color: var(--background);
+  overflow: hidden;
 }
 
 #main-decoration img {
-  width: 100%;
+  min-width: 100%;
   height: 100vh;
 }
 
@@ -318,15 +319,10 @@ section h2 {
   border-radius: 50px;
 }
 
-#description .container img {
-  width: 50%;
-  border-radius: 50px 0px 0px 50px;
-  border-right: 0.3em solid var(--dark-color);
-}
-
 #description .container .card .text {
-  width: 50%;
-  margin: 1em;
+  background-color: var(--sub-card-color);
+  padding: 2em;
+  border-radius: 50px;
 }
 
 #campus {
@@ -396,15 +392,13 @@ section h2 {
   min-width: min-content;
   padding: 1em;
   border-radius: 25px;
-  height: 75%;
 }
 
 #specialite .card img {
-  height: 16vh;
-  width: 90%;
+  height: auto;
   border-radius: 25px;
   transition: 1s;
-  width: 24vw;
+  width: 22vw;
 }
 
 #specialite .card h3 {
@@ -423,6 +417,7 @@ button {
   color: var(--main-text-color);
   transition: 1.5s;
   width: 100%;
+  margin: 1em;
 }
 
 #specialite .button {
@@ -641,20 +636,6 @@ footer #redirect a {
     margin-right: 0;
   }
 
-  #description .container img {
-    display: flex;
-    border-radius: 50px 50px 0px 0px;
-    flex-direction: column;
-    border-right: 0;
-    width: 100%;
-    height: 30vh;
-    border-bottom: 0.3em solid var(--dark-color);
-  }
-
-  #description .container .card .text {
-    width: 90%;
-  }
-
   .scrollable {
     height: 73vh;
   }
@@ -683,7 +664,10 @@ footer #redirect a {
 
   #specialite .card {
     height: 85%;
-    padding-bottom: 0;
+  }
+
+  #specialite .card img {
+    width: 60vw;
   }
 
   .title {
@@ -784,20 +768,6 @@ footer #redirect a {
     margin-right: 0;
   }
 
-  #description .container img {
-    display: flex;
-    border-radius: 50px 50px 0px 0px;
-    flex-direction: column;
-    border-right: 0;
-    width: 100%;
-    height: 30vh;
-    border-bottom: 0.3em solid var(--dark-color);
-  }
-
-  #description .container .card .text {
-    width: 90%;
-  }
-
   .scrollable {
     height: 65vh;
   }
@@ -805,6 +775,10 @@ footer #redirect a {
   #specialite {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5em;
+  }
+
+  #specialite .card img {
+    width: 30vw;
   }
 
   .title {
