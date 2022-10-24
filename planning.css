@@ -85,7 +85,7 @@ header:hover #socials {
 }
 
 header:hover #socials a {
-  color: var(--dark-color);
+  color: var(--brand-color);
   text-decoration: none;
 }
 
@@ -207,13 +207,13 @@ tr {
 }
 
 th {
-  background-color: var(--card-color);
-  border: solid var(--sub-card-color);
+  background-color: var(--sub-card-color);
+  border: solid var(--card-color);
 }
 
 td {
   padding: 0;
-  width: 13vh;
+  width: 12vw;
   height: 6vh;
   border-top: solid var(--card-color);
   border-left: solid var(--card-color);
@@ -348,7 +348,7 @@ footer #redirect a {
   }
 
   td {
-    width: 6vw;
+    width: 14vw;
     height: 3vh;
     font-size: 0.8em;
   }
@@ -405,7 +405,7 @@ footer #redirect a {
   }
 
   td {
-    width: 10vh;
+    width: 15vw;
     height: 5vh;
   }
 

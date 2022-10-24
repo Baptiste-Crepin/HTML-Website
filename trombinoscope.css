@@ -85,7 +85,7 @@ header:hover #socials {
 }
 
 header:hover #socials a {
-  color: var(--dark-color);
+  color: var(--brand-color);
   text-decoration: none;
 }
 
@@ -216,11 +216,15 @@ main {
   background-color: var(--sub-card-color);
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: min-content;
+  padding-bottom: 1em;
 }
 
 #trombinoscope #grid .card img {
-  border: solid 0.5em var(--card-color);
+  border: solid 0.5em var(--sub-card-color);
+  width: 15vw;
+  height: 15vw;
 }
 
 #trombinoscope #grid .card .text {
@@ -229,6 +233,7 @@ main {
   flex-direction: column;
   margin-left: 0.4em;
   color: var(--main-text-color);
+  font-size: 0.8em;
 }
 
 #trombinoscope #grid .card .text p {
@@ -333,8 +338,18 @@ footer #redirect a {
   }
 
   #trombinoscope #grid {
+    padding: 1.5em;
+  }
+
+  #trombinoscope #grid {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2em 0.5em;
+  }
+
+  #trombinoscope #grid .card img {
+    border: solid 0.5em var(--sub-card-color);
+    width: 20vw;
+    height: 20vw;
   }
 
   footer {
@@ -387,6 +402,12 @@ footer #redirect a {
   #trombinoscope #grid {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em 0.5em;
+  }
+
+  #trombinoscope #grid .card img {
+    border: solid 0.5em var(--sub-card-color);
+    width: 20vw;
+    height: 20vw;
   }
 
   footer {

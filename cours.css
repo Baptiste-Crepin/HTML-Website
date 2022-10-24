@@ -85,7 +85,7 @@ header:hover #socials {
 }
 
 header:hover #socials a {
-  color: var(--dark-color);
+  color: var(--brand-color);
   text-decoration: none;
 }
 
@@ -188,6 +188,7 @@ main {
   justify-content: center;
   flex-direction: column;
   background-color: var(--background);
+  overflow: hidden;
 }
 
 h1 {
@@ -331,8 +332,13 @@ footer #redirect a {
 
   fieldset {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1.5em;
     width: 85%;
+    border: solid 1.5em var(--card-color);
+  }
+
+  legend {
+    border: solid 1em var(--card-color);
   }
 
   footer {
