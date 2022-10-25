@@ -212,7 +212,7 @@ fieldset {
   margin-top: 2em;
   margin-bottom: 2em;
   width: 75%;
-  border: solid 2.5em var(--card-color);
+  border: solid 1.5em var(--card-color);
 }
 
 legend {
@@ -221,7 +221,7 @@ legend {
   border-radius: 25px;
   padding-left: 1em;
   padding-right: 1em;
-  border: solid 1.5em var(--card-color);
+  border: solid 1em var(--card-color);
   border-radius: 40px;
 }
 
