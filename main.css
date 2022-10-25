@@ -697,6 +697,10 @@ footer #redirect a {
     align-items: center;
   }
 
+  #ionis .key-elements section {
+    width: 90%;
+  }
+
   #ionis .card p {
     margin: 0.5em;
   }
@@ -811,6 +815,10 @@ footer #redirect a {
 
   #ionis .card p {
     margin: 0.5em;
+  }
+
+  #ionis .key-elements section {
+    width: 90%;
   }
 
   #ionis .key-elements .card {
