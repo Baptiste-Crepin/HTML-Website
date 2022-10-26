@@ -56,7 +56,7 @@ header #center {
   justify-content: center;
 }
 
-header #socials {
+header .socials {
   color: var(--main-text-color);
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ header #socials {
   transition: 1.5s;
 }
 
-header #socials a {
+header .socials a {
   color: var(--main-text-color);
   text-decoration: none;
   transition: 1.5s;
@@ -84,16 +84,16 @@ header:hover p {
   color: var(--brand-color);
 }
 
-header:hover #socials {
+header:hover .socials {
   color: var(--brand-color);
 }
 
-header:hover #socials a {
+header:hover .socials a {
   color: var(--brand-color);
   text-decoration: none;
 }
 
-header:hover #socials a:hover {
+header:hover .socials a:hover {
   transform: scale(1.5);
   color: var(--dark-color);
 }
@@ -267,13 +267,13 @@ footer #infos {
   color: var(--light-color);
 }
 
-footer #socials {
+footer .socials {
   display: flex;
   justify-content: space-evenly;
   width: 15%;
 }
 
-footer #socials a {
+footer .socials a {
   color: var(--main-text-color);
   text-decoration: none;
 }
@@ -367,7 +367,7 @@ footer #redirect a {
     max-width: 90%;
   }
 
-  footer #socials {
+  footer .socials {
     width: 30%;
   }
 
@@ -425,7 +425,7 @@ footer #redirect a {
     max-width: 90%;
   }
 
-  footer #socials {
+  footer .socials {
     width: 30%;
   }
 

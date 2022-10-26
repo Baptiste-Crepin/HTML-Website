@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -24,7 +24,7 @@
 
       <p>L’ÉCOLE DES EXPERTS MÉTIERS DE L’INFORMATIQUE</p>
 
-      <div id="socials">
+      <div class="socials">
         <a href="https://www.facebook.com/supinfo"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/supinfo/"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://twitter.com/SUPINFO"><i class="fa-brands fa-twitter"></i></a>
@@ -70,7 +70,7 @@
         Supinfo via les informations de la page contact </h3>
       <form>
 
-        <section>
+        <div class="wrapper">
           <div class="ensemble">
             <label for="lastname">Nom *</label>
             <input type="text" id="lastname" required>
@@ -80,9 +80,9 @@
             <label for="name">Prénom *</label>
             <input type="text" id="name" required>
           </div>
-        </section>
+        </div>
 
-        <section>
+        <div class="wrapper">
           <div class="ensemble">
             <label for="email">Email *</label>
             <input type="email" id="email" required>
@@ -90,16 +90,16 @@
 
           <div class="ensemble">
             <label for="phone">Téléphone</label>
-            <input type="tel" id="phone" />
+            <input type="tel" id="phone">
           </div>
-        </section>
+        </div>
 
         <label for="message">Message *</label>
         <textarea id="message" placeholder="Veuillez entrer votre message..." required></textarea>
 
         <label for="campsus">Campus a contacter</label>
         <select id="campsus" required>
-          <option value="0">-- Selectionnez un campus --</option>
+          <option value="">-- Selectionnez un campus --</option>
           <option value="1">Lille</option>
           <option value="2">Lyon</option>
           <option value="3">Paris</option>
@@ -133,7 +133,7 @@
         travailleurs de suivre leur formation dans un campus d’accueil. </p>
     </div>
 
-    <div id="socials">
+    <div class="socials">
       <a href="https://www.facebook.com/supinfo"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="https://www.instagram.com/supinfo/"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://twitter.com/SUPINFO"><i class="fa-brands fa-twitter"></i></a>
