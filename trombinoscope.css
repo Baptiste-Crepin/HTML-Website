@@ -145,12 +145,14 @@ div#navbar a {
   color: var(--light-color);
   opacity: 0;
   transition: 2s;
+  visibility: collapse;
 }
 
 input.toggle:checked + label div#navbar {
   height: 4em;
   background-color: var(--brand-color);
   border-bottom: 0.3em solid var(--light-color);
+  border-top: 0.3em solid var(--background);
   transition: 2s;
 }
 
@@ -158,6 +160,7 @@ input.toggle:checked + label div#navbar a {
   font-size: 1.3em;
   text-align: center;
   animation: 1.2s apear forwards;
+  visibility: visible;
 }
 
 header:hover input.toggle:checked + label div#navbar {

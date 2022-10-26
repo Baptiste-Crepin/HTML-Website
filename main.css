@@ -136,6 +136,7 @@ div#navbar a {
   color: var(--light-color);
   opacity: 0;
   transition: 2s;
+  visibility: collapse;
 }
 
 input.toggle:checked + label div#navbar {
@@ -150,6 +151,7 @@ input.toggle:checked + label div#navbar a {
   font-size: 1.3em;
   text-align: center;
   animation: 1.2s apear forwards;
+  visibility: visible;
 }
 
 header:hover input.toggle:checked + label div#navbar {
