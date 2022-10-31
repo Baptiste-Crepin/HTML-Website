@@ -73,7 +73,7 @@ header:hover {
 }
 
 header:hover img {
-  content: url(Medias/Logo/logo-supinfo.png);
+  content: url(../pictures/Logo/logo-supinfo.png);
 }
 
 header:hover p {
@@ -117,7 +117,6 @@ nav i {
 
 nav i:hover {
   transform: scale(3.3);
-  color: var(--light-color);
 }
 
 header:hover nav i {
@@ -169,15 +168,6 @@ header:hover input.toggle:checked + label div#navbar a {
   color: var(--brand-color);
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: var(--background);
-  padding-bottom: 2em;
-}
-
 @keyframes dropdown {
   to {
     height: 4em;
@@ -191,58 +181,55 @@ main {
 }
 
 #spacing {
-  height: 8em;
+  height: 10em;
+  background-color: var(--background);
 }
 
-#grille {
+main {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  background-color: var(--background);
+  overflow: hidden;
 }
 
-table {
-  border: solid var(--sub-card-color);
-  border-collapse: collapse;
-}
-
-tr {
-  color: var(--main-text-color);
-}
-
-th {
-  background-color: var(--sub-card-color);
-  border: solid var(--card-color);
-}
-
-td {
-  padding: 0;
-  width: 12vw;
-  height: 6vh;
-  border-top: solid var(--card-color);
-  border-left: solid var(--card-color);
-  color: var(--main-text-color);
+h1 {
   text-align: center;
+  color: var(--dark-color);
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0.3em;
+}
+
+fieldset {
   background-color: var(--sub-card-color);
+  display: flex;
+  border-color: var(--light-color);
+  border-radius: 10px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 75%;
+  border: solid 1.5em var(--card-color);
 }
 
-.rentre {
-  background-color: lightpink;
-  color: var(--dark-color);
+legend {
+  color: var(--main-text-color);
+  background-color: var(--sub-card-color);
+  border-radius: 25px;
+  padding-left: 1em;
+  padding-right: 1em;
+  border: solid 1em var(--card-color);
+  border-radius: 40px;
 }
 
-.html {
-  background-color: hotpink;
-  color: var(--dark-color);
-}
-
-.css {
-  background-color: deeppink;
-  color: var(--dark-color);
-}
-
-#midi {
-  background-color: violet;
-  color: var(--dark-color);
+ul {
+  color: var(--light-color);
 }
 
 footer {
@@ -342,18 +329,19 @@ footer #redirect a {
     font-size: 1em;
   }
 
-  #spacing {
-    height: 12em;
-  }
-
   h1 {
     font-size: 1.7em;
   }
 
-  td {
-    width: 14vw;
-    height: 3vh;
-    font-size: 0.8em;
+  fieldset {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    width: 85%;
+    border: solid 1.5em var(--card-color);
+  }
+
+  legend {
+    border: solid 1em var(--card-color);
   }
 
   footer {
@@ -407,9 +395,10 @@ footer #redirect a {
     font-size: 1.8em;
   }
 
-  td {
-    width: 15vw;
-    height: 5vh;
+  fieldset {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 85%;
   }
 
   footer {

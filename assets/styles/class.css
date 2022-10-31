@@ -15,6 +15,10 @@
   --dark-color: #000000;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background-color: var(--brand-color);
@@ -73,7 +77,7 @@ header:hover {
 }
 
 header:hover img {
-  content: url(Medias/Logo/logo-supinfo.png);
+  content: url(../pictures/Logo/logo-supinfo.png);
 }
 
 header:hover p {
@@ -168,6 +172,15 @@ header:hover input.toggle:checked + label div#navbar a {
   color: var(--brand-color);
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--background);
+  padding-bottom: 2em;
+}
+
 @keyframes dropdown {
   to {
     height: 4em;
@@ -180,75 +193,58 @@ header:hover input.toggle:checked + label div#navbar a {
   }
 }
 
-main {
+#spacing {
+  height: 10em;
+}
+
+#container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  background-color: var(--background);
-  padding-bottom: 2em;
 }
 
-#spacing {
-  height: 8em;
-  background-color: var(--background);
+#trombinoscope h2 {
+  text-align: center;
+  color: var(--dark-color);
 }
 
-.card {
+#trombinoscope #grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2em 0.5em;
+  background-color: var(--card-color);
+  padding: 3em;
+  border-radius: 25px;
+}
+
+#trombinoscope #grid .card {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  background-color: var(--sub-card-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 15px;
+  width: min-content;
+  padding-bottom: 1em;
 }
 
-form {
+#trombinoscope #grid .card img {
+  border: solid 0.5em var(--sub-card-color);
+  width: 15vw;
+  height: 15vw;
+}
+
+#trombinoscope #grid .card .text {
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  width: max-content;
-  align-items: center;
-}
-
-h3 {
+  margin-left: 0.4em;
   color: var(--main-text-color);
-  margin: 2em;
+  font-size: 0.8em;
 }
 
-label {
-  color: var(--main-text-color);
-}
-
-input,
-select {
-  margin-bottom: 2em;
-  width: 15em;
-  border-radius: 10px;
-  margin-right: 1em;
-  margin-left: 1em;
-}
-
-select {
-  width: 32em;
-}
-
-textarea {
-  width: 90%;
-  border-radius: 5px;
-  height: 25vh;
-}
-
-.ensemble {
-  display: flex;
-  flex-direction: column;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-}
-
-input#send,
-input#reset {
-  padding: 0.8em;
+#trombinoscope #grid .card .text p {
+  margin: 0.3em;
 }
 
 footer {
@@ -273,6 +269,7 @@ footer #infos {
   max-width: 30%;
   color: var(--light-color);
 }
+
 footer .socials {
   display: flex;
   justify-content: space-evenly;
@@ -347,24 +344,16 @@ footer #redirect a {
     font-size: 1em;
   }
 
-  .card {
-    width: 75%;
+  #trombinoscope #grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em 0.5em;
+    padding: 1.2em;
   }
 
-  form {
-    width: 70%;
-  }
-
-  .wrapper {
-    flex-direction: column;
-  }
-
-  textarea {
-    width: 100%;
-  }
-
-  select {
-    width: 90%;
+  #trombinoscope #grid .card img {
+    border: solid 0.5em var(--sub-card-color);
+    width: 30vw;
+    height: 30vw;
   }
 
   footer {
@@ -414,8 +403,15 @@ footer #redirect a {
     font-size: 1.1em;
   }
 
-  .card {
-    width: 80%;
+  #trombinoscope #grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em 0.5em;
+  }
+
+  #trombinoscope #grid .card img {
+    border: solid 0.5em var(--sub-card-color);
+    width: 20vw;
+    height: 20vw;
   }
 
   footer {

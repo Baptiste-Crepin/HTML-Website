@@ -77,7 +77,7 @@ header:hover {
 }
 
 header:hover img {
-  content: url(Medias/Logo/logo-supinfo.png);
+  content: url(../pictures/Logo/logo-supinfo.png);
 }
 
 header:hover p {
