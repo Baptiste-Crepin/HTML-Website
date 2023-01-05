@@ -65,6 +65,11 @@ header .socials {
   transition: 1.5s;
 }
 
+.svg {
+  height: 1rem;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(236deg) brightness(108%) contrast(101%);
+}
+
 header .socials a {
   color: var(--main-text-color);
   text-decoration: none;
@@ -76,7 +81,7 @@ header:hover {
   border-bottom: 0.2em solid var(--brand-color);
 }
 
-header:hover img {
+header:hover aside img {
   content: url(../pictures/Logo/logo-supinfo.png);
 }
 
@@ -84,8 +89,8 @@ header:hover p {
   color: var(--brand-color);
 }
 
-header:hover .socials {
-  color: var(--brand-color);
+header:hover .svg {
+  filter: invert(17%) sepia(65%) saturate(2406%) hue-rotate(236deg) brightness(94%) contrast(96%);
 }
 
 header:hover .socials a {
@@ -103,19 +108,9 @@ input.toggle {
   position: absolute;
 }
 
-nav i {
+nav img {
   transform: scale(3);
   color: var(--light-color);
-}
-
-nav i:hover {
-  transform: scale(3.3);
-  color: red;
-  color: var(--light-color);
-}
-
-header:hover nav i {
-  color: var(--brand-color);
 }
 
 div#navbar {
@@ -139,7 +134,7 @@ div#navbar a {
   visibility: collapse;
 }
 
-input.toggle:checked + label div#navbar {
+input.toggle:checked+label div#navbar {
   height: 4em;
   background-color: var(--brand-color);
   border-bottom: 0.3em solid var(--light-color);
@@ -147,19 +142,19 @@ input.toggle:checked + label div#navbar {
   transition: 2s;
 }
 
-input.toggle:checked + label div#navbar a {
+input.toggle:checked+label div#navbar a {
   font-size: 1.3em;
   text-align: center;
   animation: 1.2s apear forwards;
   visibility: visible;
 }
 
-header:hover input.toggle:checked + label div#navbar {
+header:hover input.toggle:checked+label div#navbar {
   background-color: var(--light-color);
   border-bottom: 0.2em solid var(--brand-color);
 }
 
-header:hover input.toggle:checked + label div#navbar a {
+header:hover input.toggle:checked+label div#navbar a {
   color: var(--brand-color);
 }
 
@@ -214,21 +209,10 @@ header:hover input.toggle:checked + label div#navbar a {
   animation: 1s pulse infinite;
 }
 
-#main-decoration i {
-  color: var(--light-color);
-  font-size: 40px;
-  animation: gradient 5s infinite;
-}
 
 @keyframes pulse {
   to {
     box-shadow: 0 0 0 6px var(--sub-card-color);
-  }
-}
-
-@keyframes gradient {
-  to {
-    color: var(--sub-card-color);
   }
 }
 
@@ -284,9 +268,8 @@ section h2 {
   margin-top: 0em;
 }
 
-.title i {
+.title .svg {
   margin-left: 1em;
-  color: var(--main-text-color);
 }
 
 #description .title {
@@ -344,7 +327,7 @@ section h2 {
   margin-bottom: 0.2em;
 }
 
-#campus .card img {
+#campus .card aside img {
   width: 25vw;
   border-radius: 1.7em 0em 0em 1.7em;
   border-right: 0.3em solid var(--dark-color);
@@ -498,7 +481,7 @@ button {
   flex-direction: row;
 }
 
-#ionis .card i {
+#ionis .card .svg {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -552,6 +535,10 @@ footer .socials {
   width: 15%;
 }
 
+footer .socials img {
+  width: 100%;
+}
+
 footer .socials a {
   color: var(--main-text-color);
   text-decoration: none;
@@ -597,11 +584,11 @@ footer #redirect a {
     margin-bottom: 0.5em;
   }
 
-  nav i {
+  nav .svg {
     transform: scale(1.5);
   }
 
-  nav i:hover {
+  nav .svg:hover {
     transform: scale(1.7);
     color: red;
     color: var(--light-color);
@@ -611,13 +598,13 @@ footer #redirect a {
     top: 10em;
   }
 
-  input.toggle:checked + label div#navbar {
+  input.toggle:checked+label div#navbar {
     flex-direction: column;
     top: 9.5em;
     height: 11em;
   }
 
-  input.toggle:checked + label div#navbar a {
+  input.toggle:checked+label div#navbar a {
     font-size: 1em;
   }
 
@@ -687,7 +674,7 @@ footer #redirect a {
     text-align: center;
   }
 
-  .title i {
+  .title .svg {
     margin: 0;
   }
 
@@ -758,7 +745,7 @@ footer #redirect a {
     margin-top: 0;
   }
 
-  input.toggle:checked + label div#navbar a {
+  input.toggle:checked+label div#navbar a {
     font-size: 1.1em;
   }
 
@@ -803,7 +790,7 @@ footer #redirect a {
     text-align: center;
   }
 
-  .title i {
+  .title .svg {
     margin: 0;
   }
 

@@ -65,6 +65,11 @@ header .socials {
   transition: 1.5s;
 }
 
+.svg {
+  height: 1rem;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(236deg) brightness(108%) contrast(101%);
+}
+
 header .socials a {
   color: var(--main-text-color);
   text-decoration: none;
@@ -76,8 +81,12 @@ header:hover {
   border-bottom: 0.2em solid var(--brand-color);
 }
 
-header:hover img {
+header:hover aside img {
   content: url(../pictures/Logo/logo-supinfo.png);
+}
+
+header:hover .svg {
+  filter: invert(17%) sepia(65%) saturate(2406%) hue-rotate(236deg) brightness(94%) contrast(96%);
 }
 
 header:hover p {
@@ -148,7 +157,7 @@ div#navbar a {
   visibility: collapse;
 }
 
-input.toggle:checked + label div#navbar {
+input.toggle:checked+label div#navbar {
   height: 4em;
   background-color: var(--brand-color);
   border-bottom: 0.3em solid var(--light-color);
@@ -156,19 +165,19 @@ input.toggle:checked + label div#navbar {
   transition: 2s;
 }
 
-input.toggle:checked + label div#navbar a {
+input.toggle:checked+label div#navbar a {
   font-size: 1.3em;
   text-align: center;
   animation: 1.2s apear forwards;
   visibility: visible;
 }
 
-header:hover input.toggle:checked + label div#navbar {
+header:hover input.toggle:checked+label div#navbar {
   background-color: var(--light-color);
   border-bottom: 0.2em solid var(--brand-color);
 }
 
-header:hover input.toggle:checked + label div#navbar a {
+header:hover input.toggle:checked+label div#navbar a {
   color: var(--brand-color);
 }
 
@@ -276,6 +285,10 @@ footer .socials {
   width: 15%;
 }
 
+footer .socials .svg {
+  width: 100%;
+}
+
 footer .socials a {
   color: var(--main-text-color);
   text-decoration: none;
@@ -334,13 +347,13 @@ footer #redirect a {
     top: 10em;
   }
 
-  input.toggle:checked + label div#navbar {
+  input.toggle:checked+label div#navbar {
     flex-direction: column;
     top: 9.5em;
     height: 11em;
   }
 
-  input.toggle:checked + label div#navbar a {
+  input.toggle:checked+label div#navbar a {
     font-size: 1em;
   }
 
@@ -399,7 +412,7 @@ footer #redirect a {
     margin-top: 0;
   }
 
-  input.toggle:checked + label div#navbar a {
+  input.toggle:checked+label div#navbar a {
     font-size: 1.1em;
   }
 
